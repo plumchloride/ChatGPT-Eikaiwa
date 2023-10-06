@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ChatGPT-Eikaiwa</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jQuery.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body>
+
+    <div id="sidebar" class="wrapper_box">
+      <h1>ChatGPT-Eikaiwa</h1>
+      <p>OpenAIのGPTを利用した英会話</p>
+      <h2>注意事項</h2>
+      <ul>
+        <li><small>本アプリケーションを利用してユーザ、または第三者に何らかの障害が発生した場合でも制作者は責任を負いません。</small></li>
+        <li><small>音声認識に利用した音声データの取り扱いはブラウザ各社のプライバシーポリシーに準じています</small></li>
+      </ul>
+      <h2>OpenAI API Key <small><a href="https://platform.openai.com/account/api-keys" target="_blank">こちら</a>から取得出来ます</small></h2>
+      <form id="API_form" onsubmit="return false;"><input type="password" id="OpenAI_API_KEY" class="side_box" placeholder="Enter Your API Key (sk-...)"></form>
+      <p><small>Enterで確定して下さい。入力無しで確定するとAPI Keyが削除されます。</small></p>
+      <p><small>もしくは環境変数から設定出来ます。</small></p>
+      <code class="side_box">import os <br>os.environ["OPENAI_API_KEY"] = '&lt;OpenAI_APIのトークン&gt;'</code>
+      <br>
+      <div id="OpenAI_API_KEY_status" class="side_box"></div>
+      <hr>
+    </div>
+
+    <div id="body" class="wrapper_box">
+      <div id="body_top"><p>あ</p></div>
+      <div>
+        <div></div>
+        <form>
+          <div class="FlexTextarea">
+            <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+            <textarea id="FlexTextarea" class="FlexTextarea__textarea" placeholder="英語の会話を入力して下さい"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
