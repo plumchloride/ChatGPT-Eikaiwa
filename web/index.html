@@ -19,10 +19,10 @@
         <li><small>本アプリケーションを利用してユーザ、または第三者に何らかの障害が発生した場合でも制作者は責任を負いません。</small></li>
         <li><small>音声認識に利用した音声データの取り扱いはブラウザ各社のプライバシーポリシーに準じています</small></li>
       </ul>
-      <h2>OpenAI API Key <small><a href="https://platform.openai.com/account/api-keys" target="_blank">こちら</a>から取得出来ます</small></h2>
+      <h2>OpenAI API Key <small><a href="https://platform.openai.com/account/api-keys" target="_blank">こちら</a>から取得出来ます（有料）</small></h2>
       <form id="API_form" onsubmit="return false;"><input type="password" id="OpenAI_API_KEY" class="side_box" placeholder="Enter Your API Key (sk-...)"></form>
-      <p><small>Enterで確定して下さい。入力無しで確定するとAPI Keyが削除されます。</small></p>
-      <p><small>もしくは環境変数から設定出来ます。</small></p>
+      <p><small>Enterで確定して下さい。入力無しで確定するとAPI Keyが削除されます。（どちらもpythonのos.environを利用しています）</small></p>
+      <p><small><strong>もしくは</strong>環境変数から設定出来ます。下記コード（一時的）や環境変数への設定が可能です。</small></p>
       <code class="side_box">import os <br>os.environ["OPENAI_API_KEY"] = '&lt;OpenAI_APIのトークン&gt;'</code>
       <br>
       <div id="OpenAI_API_KEY_status" class="side_box"></div>
@@ -33,9 +33,10 @@
       <div id="body_top"><p>あ</p></div>
       <div>
         <div></div>
-        <form>
+        <form id="eikaiwa_form" onsubmit="return false;">
           <div class="FlexTextarea">
             <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+            <div id="textarea_info">Shift + Enterで送信</div>
             <textarea id="FlexTextarea" class="FlexTextarea__textarea" placeholder="英語の会話を入力して下さい"></textarea>
           </div>
         </form>

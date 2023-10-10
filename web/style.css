@@ -116,3 +116,13 @@ body{
   border: 2px solid #5863ea;
   outline: 0;
 }
+#textarea_info{
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  font-size: small;
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+  color: #b6c3c6;
+}
